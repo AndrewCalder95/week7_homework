@@ -20,19 +20,28 @@ const SongForm = ({ onSongSubmit }) => {
         if (!artistToSubmit || !titleToSubmit) {
             return;
         }
-        // onCommentSubmit({
-        //     author: artistToSubmit,
-        //     title: titleToSubmit,
-        // })
-        // setArtist("");
-        // setTitle("");
+        onSongSubmit({
+            artist: artistToSubmit,
+            title: titleToSubmit,
+        })
+        setArtist("");
+        setTitle("");
     };
 
     return (
-        <form onSubmit={handleFormSubmit}>
-            <input type="text" placeholder="Artist" value={artist} onChange={handleArtistChange}/>
-            <input type="text" placeholder="Title" value={title} onChange={handleTitleChange}/>
-            <input type="submit" value="Find"/>
+        <form id="song_form" onSubmit={handleFormSubmit}>
+            <div id="form_inputs">
+            <div>
+                <value> Artist: </value>
+                    <input type="text" placeholder="Artist" value={artist} onChange={handleArtistChange} />
+            </div>
+            <div>
+                <value> Song Title: </value>
+                    <input type="text" placeholder="Title" value={title} onChange={handleTitleChange} />
+            </div>
+            <hr></hr>
+            <input id = "submit" type="submit" value="Find"/>
+            </div>
         </form>
     )
 }

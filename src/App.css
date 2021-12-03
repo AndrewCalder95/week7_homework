@@ -36,3 +36,67 @@
     transform: rotate(360deg);
   }
 }
+
+#app_container { 
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+ }
+
+
+#title {
+  /* justify-content: flex-end; */
+  color: rgb(255, 252, 208); 
+  text-align: center;
+  font-family: 'Codystar';
+  margin: 10px;
+  font-size: 50px;
+}
+
+#song_form {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  margin-right: 20px;
+  padding: 30px;
+  border: solid 2px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+#submit {
+  border: solid 1px;
+  background-color: rgb(253, 154, 154);
+  width: 100px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 15px;
+}
+
+#submit:hover {
+  background-color: rgb(155, 155, 155);
+}
+
+html {
+  background-color: rgb(177, 185, 255);
+}
+
+#root {
+  white-space:pre-line
+}
+
+#lyrics {
+  font-family: 'Neucha', cursive;
+  /* background-color: white;
+  padding: 40px;
+  border: solid 1px; */
+}
+
+h4 {
+  font-family: 'Over the rainbow', cursive;
+  text-align: center;
+}
+
+#form_inputs {
+  display: flex;
+  flex-direction: row;
+}

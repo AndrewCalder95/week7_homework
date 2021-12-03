@@ -1,12 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import LyricContainer from './containers/LyricContainer';
 
 function App() {
 
   return (
-    <div>
-      <h1> Lyric Generator </h1>
+    <div id= "app_container">
+      {/* <h1 id="title"> Lyric Finder </h1> */}
       <LyricContainer />
       </div>
   )
