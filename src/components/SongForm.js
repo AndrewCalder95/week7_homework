@@ -31,15 +31,14 @@ const SongForm = ({ onSongSubmit }) => {
     return (
         <form id="song_form" onSubmit={handleFormSubmit}>
             <div id="form_inputs">
-            <div>
+            <div id ="artist">
                 <value> Artist: </value>
                     <input type="text" placeholder="Artist" value={artist} onChange={handleArtistChange} />
             </div>
-            <div>
+            <div id ="song_title">
                 <value> Song Title: </value>
                     <input type="text" placeholder="Title" value={title} onChange={handleTitleChange} />
-            </div>
-            <hr></hr>
+                </div>
             <input id = "submit" type="submit" value="Find"/>
             </div>
         </form>

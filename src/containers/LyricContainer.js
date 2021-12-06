@@ -3,6 +3,7 @@ import SongForm from '../components/SongForm'
 import SongList from '../components/SongList'
 import Lyrics from '../components/Lyrics'
 
+
 const LyricContainer = () => {
 
     const [lyrics, setLyrics] = useState([])
@@ -10,18 +11,13 @@ const LyricContainer = () => {
 
 
     const addSong = (submittedSong) => {
-    
-        const updateSong = [ ... lyrics, submittedSong];
+        const updateSong = [submittedSong];
         setLyrics(updateSong)
         const artist = submittedSong.artist
         const title = submittedSong.title
         fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`)
         .then(res => res.json())
-        // .then(song => setSong(song.error))
         .then(song => setSong(song.lyrics))
-        // if (song.length < 1) {
-        //     return "No Record Found"
-        
         
     }
 
@@ -31,8 +27,8 @@ const LyricContainer = () => {
             <h4> Enter the name and artist of any song and get the lyrics! </h4>
             <SongForm onSongSubmit={(song) => addSong(song)} />
             <div id="lyrics">
-            <SongList lyrics={lyrics}/>
-            <Lyrics song={song} />
+                <SongList lyrics={lyrics}/>
+                <Lyrics song={song} />
             </div>
         </div>
     )
